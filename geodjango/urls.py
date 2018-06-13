@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib.gis import admin
 from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+
+from world.views import BorderViewSet, SchoolViewSet, FacilityViewSet, BusstopViewSet
+
+router = DefaultRouter()
+router.register('border', BorderViewSet)
+router.register('school', SchoolViewSet)
+router.register('facility', FacilityViewSet)
+router.register('busstop', BusstopViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('world.urls')),
+    path('api/', include(router.urls)),
+    # path('', include('world.urls')),
 ]
