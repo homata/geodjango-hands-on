@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'world',
+    'leaflet',
     'django_filters',
     'rest_framework',
     'rest_framework_gis',
