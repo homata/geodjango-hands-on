@@ -135,3 +135,9 @@ from django.contrib.gis import admin
 admin.site.site_title  = 'GeoDjangoログイン'
 admin.site.site_header = 'GeoDjangoハンズオン'
 admin.site.index_title = 'GeoDjangoメニュー'
+
+# LOGIN
+# ------------------------------------------------------------------------------
+LOGIN_URL='/accounts/login'
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
