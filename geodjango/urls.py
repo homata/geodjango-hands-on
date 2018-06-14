@@ -30,8 +30,9 @@ router.register('busstop', BusstopViewSet)
 urlpatterns = [
     path('favicon\.ico', RedirectView.as_view(url='/static/images/favicon.ico')),
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('accounts/', include('django.contrib.auth.urls')),
 
+    path('api/', include(router.urls)),
     path('', index, name='world_index'),
     path('world/geojson/', GeojsonAPIView.as_view(), name='geojson_view'),
 ]
