@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'world',
+    'world.apps.WorldConfig',
     'leaflet',
     'django_filters',
     'rest_framework',

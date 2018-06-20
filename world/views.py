@@ -15,6 +15,12 @@ from django.core.serializers import serialize
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
+# Django REST Frameworkに再挑戦 その5
+#   http://pythonskywalker.hatenablog.com/entry/2017/01/05/172222
+# Django REST frameworkでAPIにアクセス権を実装する方法
+#   http://racchai.hatenablog.com/entry/2016/05/27/070000
+from rest_framework.permissions import IsAuthenticated
+
 # -----------------------------------------
 @login_required
 def index(request):
@@ -36,6 +42,7 @@ class GeojsonAPIView(APIView):
     GeoJsonデータ取得
     @return geojson形式
     """
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **keywords):
         try:
