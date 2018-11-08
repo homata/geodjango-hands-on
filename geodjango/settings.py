@@ -86,6 +86,7 @@ DATABASES = {
         'NAME': 'geodjangodb',
         'USER': 'postgres',
         'HOST':'localhost',
+        'PASSWORD': ''
     }
 }
 
